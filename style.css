@@ -5,7 +5,7 @@ body {
 }
 
 .container {
-  max-width: 600px;
+  max-width: 800px;
   margin: 50px auto;
   padding: 20px;
   background: #fff;
@@ -15,7 +15,7 @@ body {
 
 h1, h2 {
   text-align: center;
-  color: #4CAF50;
+  color: #D4AF37; /* ذهبي */
 }
 
 input, textarea, button {
@@ -27,13 +27,13 @@ input, textarea, button {
 }
 
 button {
-  background-color: #4CAF50;
+  background-color: #006400; /* أخضر غامق */
   color: white;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #004d00; /* أخضر غامق داكن */
 }
 
 .sidebar {
@@ -53,20 +53,15 @@ button:hover {
   text-align: center;
 }
 
-/* ألوان جديدة */
-h1 {
-  color: #D4AF37; /* ذهبي */
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-button {
-  background-color: #006400; /* أخضر غامق */
-}
-
-button:hover {
-  background-color: #004d00; /* أخضر غامق داكن */
-}
-
-.container {
-  background-color: #ffffff; /* أبيض */
-  border: 1px solid #D4AF37; /* ذهبي */
+li {
+  background: #f9f9f9;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
