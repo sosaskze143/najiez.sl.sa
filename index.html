@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ناجز - نظام إدارة الطلبات</title>
   <link rel="stylesheet" href="style.css">
+  <!-- مكتبة SheetJS لتصدير Excel -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
 </head>
 <body>
   <div class="container">
@@ -59,6 +61,8 @@
       <h1>واجهة المدير</h1>
       <div class="sidebar">
         <button onclick="showAllRequestsPage()">عرض جميع الطلبات</button>
+        <button onclick="showStatisticsPage()">إحصائيات الطلبات</button>
+        <button onclick="exportToExcel()">تصدير إلى Excel</button>
         <button onclick="logout()">تسجيل الخروج</button>
       </div>
       <div id="allRequestsPage">
@@ -66,6 +70,13 @@
         <input type="text" id="searchInput" placeholder="ابحث برقم الهوية أو رقم الطلب">
         <button onclick="searchRequests()">بحث</button>
         <ul id="allRequestsList"></ul>
+      </div>
+      <div id="statisticsPage" style="display: none;">
+        <h2>إحصائيات الطلبات</h2>
+        <p>عدد الطلبات الكلية: <span id="totalRequests"></span></p>
+        <p>الطلبات قيد المراجعة: <span id="pendingRequests"></span></p>
+        <p>الطلبات المكتملة: <span id="completedRequests"></span></p>
+        <p>الطلبات المرفوضة: <span id="rejectedRequests"></span></p>
       </div>
     </div>
   </div>
