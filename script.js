@@ -8,7 +8,7 @@ function login() {
   const user = users.find(user => user.id === id && user.password === password);
   if (user) {
     currentUser = user;
-    if (id === 'admin' && password === 'admin') {
+    if (id === '11' && password === '11') {
       showAdminPage();
     } else {
       showUserPage();
