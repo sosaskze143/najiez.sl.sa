@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ناجز - نظام إدارة الطلبات</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- صفحة تسجيل الدخول -->
+    <div id="loginPage">
+      <h1>ناجز</h1>
+      <input type="text" id="loginId" placeholder="رقم الهوية">
+      <input type="password" id="loginPassword" placeholder="كلمة المرور">
+      <button onclick="login()">تسجيل الدخول</button>
+      <button onclick="showRegisterPage()">إنشاء حساب جديد</button>
+      <button onclick="forgotPassword()">نسيت كلمة المرور</button>
+      <p id="loginMessage" class="message"></p>
+    </div>
+
+    <!-- صفحة إنشاء حساب -->
+    <div id="registerPage" style="display: none;">
+      <h1>إنشاء حساب جديد</h1>
+      <input type="text" id="registerId" placeholder="رقم الهوية">
+      <input type="password" id="registerPassword" placeholder="كلمة المرور">
+      <input type="text" id="registerPhone" placeholder="رقم الهاتف">
+      <input type="text" id="registerNationality" placeholder="الجنسية">
+      <input type="date" id="registerDob" placeholder="تاريخ الميلاد">
+      <button onclick="register()">إنشاء حساب</button>
+      <button onclick="showLoginPage()">العودة لتسجيل الدخول</button>
+      <p id="registerMessage" class="message"></p>
+    </div>
+
+    <!-- واجهة المستخدم -->
+    <div id="userPage" style="display: none;">
+      <h1>مرحبًا، <span id="username"></span></h1>
+      <div class="sidebar">
+        <button onclick="showCreateRequestPage()">إنشاء طلب</button>
+        <button onclick="showMyRequestsPage()">طلباتي</button>
+        <button onclick="logout()">تسجيل الخروج</button>
+      </div>
+      <div id="createRequestPage">
+        <h2>إنشاء طلب جديد</h2>
+        <input type="text" id="requestUserId" placeholder="رقم الهوية">
+        <textarea id="requestDetails" placeholder="تفاصيل الطلب (حد أقصى 1500 حرف)" maxlength="1500"></textarea>
+        <input type="file" id="requestFile">
+        <button onclick="submitRequest()">إرسال الطلب</button>
+        <p id="requestMessage" class="message"></p>
+      </div>
+      <div id="myRequestsPage" style="display: none;">
+        <h2>طلباتي</h2>
+        <ul id="requestsList"></ul>
+      </div>
+    </div>
+
+    <!-- واجهة المدير -->
+    <div id="adminPage" style="display: none;">
+      <h1>واجهة المدير</h1>
+      <div class="sidebar">
+        <button onclick="showAllRequestsPage()">عرض جميع الطلبات</button>
+        <button onclick="logout()">تسجيل الخروج</button>
+      </div>
+      <div id="allRequestsPage">
+        <h2>جميع الطلبات</h2>
+        <input type="text" id="searchInput" placeholder="ابحث برقم الهوية أو رقم الطلب">
+        <button onclick="searchRequests()">بحث</button>
+        <ul id="allRequestsList"></ul>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
