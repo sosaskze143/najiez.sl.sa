@@ -1,0 +1,72 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  text-align: center;
+  color: #4CAF50;
+}
+
+input, textarea, button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.sidebar {
+  background: #f4f4f4;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.sidebar button {
+  display: block;
+  width: 100%;
+  margin: 5px 0;
+}
+
+.message {
+  color: red;
+  text-align: center;
+}
+
+/* ألوان جديدة */
+h1 {
+  color: #D4AF37; /* ذهبي */
+}
+
+button {
+  background-color: #006400; /* أخضر غامق */
+}
+
+button:hover {
+  background-color: #004d00; /* أخضر غامق داكن */
+}
+
+.container {
+  background-color: #ffffff; /* أبيض */
+  border: 1px solid #D4AF37; /* ذهبي */
+}
